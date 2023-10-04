@@ -133,3 +133,4 @@ db.orders.aggregate( [
    { $project: { value: { count: { $size: "$orders_ids" }, qty: "$qty", avg: { $divide: [ "$qty", { $size: "$orders_ids" } ] } } } },
    { $merge: { into: "agg_alternative_3", on: "_id", whenMatched: "replace",  whenNotMatched: "insert" } }
 ] )Keerthi Baireddy
+Big Data Course
